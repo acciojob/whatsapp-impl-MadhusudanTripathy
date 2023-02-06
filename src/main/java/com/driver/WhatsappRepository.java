@@ -97,7 +97,7 @@ public class WhatsappRepository {
         boolean isGroupExist=groupUserMap.containsKey(group);
         if(!isGroupExist) throw new Exception("Group does not exist");
         List<User> groupUsers=groupUserMap.get(group);
-        if(groupUsers.get(0).equals(approver)) throw new Exception("Approver does not have rights");
+        if(!groupUsers.get(0).equals(approver)) throw new Exception("Approver does not have rights");
         if(!groupUsers.contains(user)) throw new Exception("User is not a participant");
         //admin setup
 //        groupUsers.remove(user);
