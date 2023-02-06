@@ -102,7 +102,7 @@ public class WhatsappRepository {
         //admin setup
 //        groupUsers.remove(user);
 //        groupUsers.set(0,user);
-//        Collections.swap(groupUsers,0,groupUsers.indexOf(user));
+        Collections.swap(groupUsers,0,groupUsers.indexOf(user));
         adminMap.put(group,user);
         return "SUCCESS";
     }
