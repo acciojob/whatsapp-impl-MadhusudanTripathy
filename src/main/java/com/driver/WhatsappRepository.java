@@ -153,12 +153,10 @@ public class WhatsappRepository {
                 for(Message message :messageSet){
                     groupMessageMap.get(group).remove(message);
                 }
-                senderMap.keySet().removeAll(messageSet);
 
                 int updatedUsersInGroup=groupUserMap.get(group).size();
                 int updatedMessagesInGroup=groupMessageMap.get(group).size();
                 int totalMessage=senderMap.size();
-
                 return updatedUsersInGroup+updatedMessagesInGroup+totalMessage;
             }
         }
